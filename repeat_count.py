@@ -2,10 +2,12 @@
 #count the No. of each distinct value
 import csv
 
-#src_dir: ./short , src_file: test_1
-#dst_dir: ./frequence, dst_dir: count_test_1
-def repeat_count(src_dir,src_file, dst_dir, dst_file):
-	f = file(src+"/"+src_file,"r")
+#@para srcDirName: the name of dir, ex "./short"
+#@para srcFileName: the name of a src file (without extension), ex "test_txt"
+#@para dstDirName
+#@para dstFilename
+def repeat_count(srcDirName,srcFileName, dstDirName, dstFileName):
+	f = file(srcDirName+"/"+src_file,"r")
 	data_list = []
 	data_list = f.readlines()
 	print len(data_list)
@@ -18,7 +20,7 @@ def repeat_count(src_dir,src_file, dst_dir, dst_file):
 	for item in my_set:
 		static[item]  = data_list.count(item)
 	
-	result_file = dst_dir+"/"+dst_file
+	result_file = dstDirName+"/"+dstFileName+".csv"
 	csvFile = open(result_file,'wb')
 	writer = csv.writer(csvFile, dialect='excel')
 	
@@ -28,5 +30,4 @@ def repeat_count(src_dir,src_file, dst_dir, dst_file):
 
 
 
-#for i in len(data_list):
 

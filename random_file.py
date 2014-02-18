@@ -1,12 +1,14 @@
 import random
 #store random numbers to a file
 
-for i in range(10):
-	dirname = "./short"
-	filename = dirname+"/test_txt"+str(i)
-	f = open(filename,"w")
-	for j in range(1000):
-		f.write(str(random.randint(0,255))+"\n")	
-	f.close()
+#dirName: "./short"
+def randomNumFile(dirName, fileNum, lineNum, startN, endN):
+	for i in range(fileNum):
+		dirname = dirName 
+		filename = dirname+"/test_txt"+str(i)+".txt"
+		f = open(filename,"w")
+		for j in range(lineNum):
+			f.write(str(random.randint(startN,endN))+"\n")	
+		f.close()
 
 
