@@ -1,0 +1,4 @@
+This group of python codes do the following things:
+1. random_file: generate sevel files to dir "./short", each file contains sevel randomly generated numbers. The domain is[0,255] 
+2. repeat_count: open a file, count the distinct values and related NO., stored the result to a csv file
+3. dir_operation: scan the files in ./short and stores the filenames, send filenames to repeat_count and store the result csv to ./frequency
