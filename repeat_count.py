@@ -7,10 +7,10 @@ import csv
 #@para dstDirName
 #@para dstFilename
 def repeat_count(srcDirName,srcFileName, dstDirName, dstFileName):
-	f = file(srcDirName+"/"+src_file,"r")
+	f = file(srcDirName+"/"+srcFileName,"r")
 	data_list = []
 	data_list = f.readlines()
-	print len(data_list)
+#print len(data_list)
 	
 	#my_set contains the distinct values in data_list
 	my_set = set(data_list)
@@ -20,7 +20,7 @@ def repeat_count(srcDirName,srcFileName, dstDirName, dstFileName):
 	for item in my_set:
 		static[item]  = data_list.count(item)
 	
-	result_file = dstDirName+"/"+dstFileName+".csv"
+	result_file = dstDirName+"/"+dstFileName
 	csvFile = open(result_file,'wb')
 	writer = csv.writer(csvFile, dialect='excel')
 	
